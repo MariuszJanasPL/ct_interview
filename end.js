@@ -51,9 +51,9 @@ let shooters = games.filter(game => game.genre.includes("fps"));
 
 // make their names uppercase
 shooters = shooters.map((game) => ({name : game.name.toUpperCase(), playTime : game.playTime }));
-
 console.log(shooters);
 
+// How much time in total did I play
 let totalHours = shooters.reduce((totalHours, game) => totalHours += game.playTime, 0);
 
 console.log("I have been shooting things for", totalHours, "hours. And counting...");
